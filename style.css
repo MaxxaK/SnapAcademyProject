@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+  --viridian: hsla(148, 24%, 44%, 1);
+  --cadet-gray: hsla(175, 11%, 58%, 1);
+  --eggplant: hsla(330, 19%, 37%, 1);
+  --puce: hsla(335, 24%, 64%, 1);
+  --fairy-tale: hsla(332, 59%, 86%, 1);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--cadet-gray);
 }
 
 .main-header {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--eggplant);
   padding-bottom: 10px;
 }
 
@@ -13,46 +24,91 @@ body {
   text-align: center;
   margin: 0;
   font-size: 8em;
-  font-family: "Helvetica";
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
   font-weight: normal;
-  color: white;
+  color:whitesmoke;
 }
 
-#card-container {
+.subtitle {
+  text-align: center;
+  margin: 0;
+  font-size: 5em;
+  font-family: "Winky Rough", sans-serif;
+  font-weight: normal;
+  color: var(--fairy-tale);
+}
+
+#tableContainer {
+  max-height: 500px;
+  max-width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  overflow: auto;
+  border: 3px solid var(--eggplant);
+  color: black;
+}
+
+th{
+  background-color: var(--viridian);
+  font-family: "Merriweather";
+}
+
+tr{
+  background-color: var(--fairy-tale);
+  font-family: "Merriweather";
+}
+
+td{
+  text-align: center;
+  font-size: small;
+}
+
+.selection {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  align-items: center;
+  font-family: "Winky Rough";
 }
 
-.card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
+.selection label {
+  margin: 5px 0;
+  margin-right: 5px;
 }
 
-.card-content {
-  padding: 20px;
-  font-family: "Verdana";
-  color: #777;
+.selection select {
+  margin: 5px 0;
+  margin-right: 10px;
+  font-family: "Merriweather";
+  background-color: var(--fairy-tale);
+  cursor: pointer;
 }
 
-.card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
+.selection select:hover{
+  background-color: whitesmoke;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.selection button {
+  margin-top: 10px;
+  background-color: var(--viridian);
+  font-family: "Winky Rough";
+}
+
+.selection button:hover {
+  background-color: rgb(104, 163, 132);;
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--eggplant);
   padding: 10px;
+}
+
+.footer h3{
+  color: var(--fairy-tale);
+  font-family: "Winky Rough";
 }
 
 button {
