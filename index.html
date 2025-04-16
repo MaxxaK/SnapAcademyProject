@@ -9,8 +9,11 @@
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <h1 class="title">Student Mental Health</h1>
+      <h2 class="subtitle">By The Numbers</h2>
     </header>
+    
+    <!--
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
@@ -23,9 +26,37 @@
         </ul>
       </div>
     </div>
+    -->
+    
+    <div id="tableContainer"></div>
+
+    <div class="selection" style="margin: 20px 0;">
+      <label for="xSelect">X Axis:</label>
+      <select id="xSelect"></select>
+    
+      <label for="ySelect" style="margin-left: 10px;">Y Axis:</label>
+      <select id="ySelect"></select>
+
+      <label for="sortBy">Sort by:</label>
+      <select id="sortData">
+        <option value="x">X Axis</option>
+        <option value="y">Y Axis</option>
+      </select>
+      
+      <!-- was going to use to change from CGPA to US GPA but didn't have time
+      <div id="gpaConvertOption" style="display: none; margin-top: 10px;">
+        <input type="checkbox" id="convertGPA">
+        <label for="convertGPA">Convert CGPA to US GPA (4.0 scale)</label>
+      </div>
+      -->
+
+      <button onclick="drawGraph()">Sort and Draw Graph</button>
+    </div>
+    
+    <canvas id="lineGraph" width="800" height="400" style="border:1px solid #ccc; display:block; margin: 20px auto;"></canvas>
+
     <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+      <h3>Snap Academies SEA Project</h3>
     </div>
   </body>
 </html>
